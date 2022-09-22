@@ -1,5 +1,10 @@
 const skills = [
-  'Node.js', 'JavaScript', 'Express', 'CSS', 'Moongose', 'MongoDB'
+  {text: 'Node.js'},
+  {text: 'JavaScript'},
+  {text: 'Express'},
+  {text: 'CSS'},
+  {text: 'MongoDB'},
+  {text: 'Mongoose'}
 ]
 
 export {
