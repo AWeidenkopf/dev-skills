@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/style.css">
   <title>Skills</title>
 </head>
 <body>
   <h1>Skills as of <%= time %></h1>
   <a href="/skills/new">Add New Skill</a>
-  <ul>
+  <ul class="list-group">
     <% skills.forEach(skill => { %>
-      <li>
+      <li class="list-group-item">
         <form action="/skills/<%= skill._id %>?_method=delete" class="delete-form" method="post">
-        <button type="submit">X</button>
+        <button type="submit" class="btn-close"></button>
         <a href="/skills/<%= skill._id %>"><%= skill.text %></a>
       </form>
       </li>
